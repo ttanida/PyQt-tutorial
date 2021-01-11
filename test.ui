@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>826</width>
-    <height>553</height>
+    <width>817</width>
+    <height>620</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
   </property>
   <property name="cursor">
    <cursorShape>ArrowCursor</cursorShape>
@@ -17,30 +22,49 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="button1">
+   <widget class="QLabel" name="photo">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>260</y>
-      <width>201</width>
-      <height>121</height>
+      <x>0</x>
+      <y>0</y>
+      <width>821</width>
+      <height>521</height>
      </rect>
     </property>
     <property name="text">
-     <string>Hello there</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Screenshot 2021-01-11 at 22.39.33.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label1">
+   <widget class="QPushButton" name="cat">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>85</y>
-      <width>261</width>
-      <height>111</height>
+      <x>180</x>
+      <y>520</y>
+      <width>181</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>Hello my name is Tim</string>
+     <string>Cat</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dog">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>520</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dog</string>
     </property>
    </widget>
   </widget>
@@ -49,7 +73,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>826</width>
+     <width>817</width>
      <height>24</height>
     </rect>
    </property>
@@ -57,10 +81,68 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="actionPaste"/>
    </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFile">
+   <property name="text">
+    <string>File</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="statusTip">
+    <string>Create a new file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save a file</string>
+   </property>
+  </action>
+  <action name="actionEdit">
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy a file</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="statusTip">
+    <string>Paste a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
